@@ -10,8 +10,10 @@ You can create your own graph represenatation with next rules:
 2) - means no relations
 3) Digits are weights of ribs
 4) Separate data with one space.
+
 Aftert you have chousen file with graph put it with jar file in one directory.
 To use jar file put next command to terminal:
+
   java -jar dijkstra.jar scheme.txt A I , where:
   - java -jar launches the programm
   - dijkstra.jar is jar file name
