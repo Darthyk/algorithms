@@ -7,7 +7,7 @@ This file will apear in target folder with name dijkstra.jar.
 Programm supports graph with number of edges equal or below 9.
 You can create your own graph represenatation with next rules:
 1) S is edge itself.
-2) - means no relations
+2) "-" means no relations
 3) Digits are weights of ribs
 4) Separate data with one space.
 
