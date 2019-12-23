@@ -7,11 +7,11 @@ public class App {
 
         Node endNode = network.getNode(NodeName.I);
         System.out.println(endNode.getNodeName());
-        Node previuosNode = endNode.getShortestPreviousNode();
-        while (previuosNode != null) {
-            System.out.println(previuosNode.getNodeName());
-            endNode = previuosNode;
-            previuosNode = endNode.getShortestPreviousNode();
+        Node previousNode = endNode.getShortestPreviousNode();
+        while (previousNode != null) {
+            System.out.println(previousNode.getNodeName());
+            endNode = previousNode;
+            previousNode = endNode.getShortestPreviousNode();
         }
     }
 }
