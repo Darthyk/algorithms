@@ -2,10 +2,10 @@ package com.darthyk.dijkstra;
 
 public class App {
     public static void main(String... args) {
-        Network network = NetworkParser.getNetwork();
-        network = Network.calculateShortestPathsForNodes(network, NodeName.A);
+        Network network = NetworkParser.getNetwork(args[0]);
+        network = Network.calculateShortestPathsForNodes(network, NodeName.valueOf(args[1]));
 
-        Node endNode = network.getNode(NodeName.I);
+        Node endNode = network.getNode(NodeName.valueOf(args[2]));
         System.out.println(endNode.getNodeName());
         Node previousNode = endNode.getShortestPreviousNode();
         while (previousNode != null) {

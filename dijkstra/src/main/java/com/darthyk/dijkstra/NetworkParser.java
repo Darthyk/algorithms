@@ -6,14 +6,14 @@ import java.io.FileReader;
 import java.util.*;
 
 public class NetworkParser {
-    public static Network getNetwork() {
+    public static Network getNetwork(String filePath) {
         BufferedReader reader;
         String s = "S";
         String dash = "-";
         String space = " ";
         Network network = new Network();
         try {
-            File file = new File(App.class.getClassLoader().getResource("scheme.txt").getFile());
+            File file = new File(filePath);
             reader = new BufferedReader(new FileReader(file));
             String line = reader.readLine();
             while (line != null) {
@@ -41,6 +41,8 @@ public class NetworkParser {
                 line = reader.readLine();
             }
         } catch (java.io.IOException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e) {
             e.printStackTrace();
         }
         return network;
